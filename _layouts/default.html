@@ -16,11 +16,10 @@
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
         
-        <a href="{{ site.baseurl }}">Home</a><p>    </p>
-        <a href="{{ site.baseurl }}/posts/">Posts/Writeups</a>
+        <a href="{{ site.baseurl }}" style='margin-right:16px'>Home</a>
+        <a href="{{ site.baseurl }}/posts/" style='margin-right:16px'>Posts/Writeups</a>
 
-        <a href="{{ site.baseurl }}/whoami">whoami</a>
-        <a href="{{ site.baseurl }}/contacts">Contact Info</a>
+        <a href="{{ site.baseurl }}/whoami" style='margin-right:16px'>whoami</a>
        <!-- <section id="downloads">
           {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>

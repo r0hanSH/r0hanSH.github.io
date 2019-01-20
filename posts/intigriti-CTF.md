@@ -43,6 +43,6 @@ After some struggle, I tried to merge them to make a new large image of 21x21 ma
 montage -mode concatenate -tile 21x21 $(ls | sort -n | awk -F'.' '{b=".";print $1b$2}') out.jpg
 ```
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/intigriti/last-pic.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/intigriti/last-pic.png)
 
 ### FLAG:YOUWINTIGRITI

@@ -2,4 +2,4 @@
 layout : default
 ---
 
-[Intigriti CTF](https://www.r0hansh.github.io/posts/intigriti-CTF)
+[Intigriti CTF](http://www.r0hansh.github.io/posts/intigriti-CTF.html)

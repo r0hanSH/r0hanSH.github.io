@@ -1,9 +1,10 @@
-
 ---
 layout : default
 ---
 
 # Intigriti CTF (Jan 2018)
+
+The challenge was created by a great bug bounty hunter [Inti De Ceukelaire](https://twitter.com/securinti)
 
 ## Problem :
 [intigriti](https://twitter.com/intigriti)
@@ -14,7 +15,7 @@ layout : default
 See the image in the tweet. Let's get started by downloading it.
 
 ```
-localhost@red:~/Desktop/intigriti$ binwalk -e DweADlgXgAAehHh.jpg 
+localhost@r0hansh:~/Desktop/intigriti$ binwalk -e DweADlgXgAAehHh.jpg 
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
@@ -25,4 +26,23 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 Open "nottheflag.pdf" and it provided a base64 encoded string. 
 
+![Branching](https://www.r0hansh.github.io/images/intigriti/base64-decode.png)
 
+Visit this link and downloaded data.zip which was password protected.
+I tried password cracking tools like fcrackzip, john but nothing worked. I revisited that intigriti tweet and noticed that this image was not posted by them. It was [WhereIsTheFlag](https://twitter.com/WhereIsTheFlag) who uploaded it. So after some recon I come across this :
+
+![Branching](https://www.r0hansh.github.io/images/intigriti/hidden-password.png)
+
+The password for data.zip is F1nDBuGz_ 
+
+Now I have a data folder which contains 441 images, namely 1_01.jpg, 1_02.jpg, ..., 1_441.jpg. Some of them were black and some were white.
+
+After some struggle, I tried to merge them to make a new large image of 21x21 matrix. But first I renamed them by deleting 1_ prefix.
+
+```
+montage -mode concatenate -tile 21x21 $(ls | sort -n | awk -F'.' '{b=".";print $1b$2}') out.jpg
+```
+
+![Branching](https://www.r0hansh.github.io/images/intigriti/last-pic.jpg)
+
+### FLAG:YOUWINTIGRITI

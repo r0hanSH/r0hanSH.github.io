@@ -4,6 +4,7 @@ layout : default
 
 # Journey of my first CTF (InCTF 2018)
 21-01-19
+
 Note : This blog post is all about my experience at InCTF 2018 and writeup of few challenges. There were two rounds : InCTF quals (Jeopardy) and InCTF finals (Attack-Defense style). It was organised by India's #1 and World's #35 CTF team as per ctftime.org ratings of 2018.
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/InCTF/group-pic.jpg)

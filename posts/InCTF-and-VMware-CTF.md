@@ -56,7 +56,7 @@ It's the file signature of a zip file.
 localhost@r0hanSH:~$ xxd -r -p Image.png > file.zip
 ```
 
-The file.zip was protected by password. So I tried fcrackzip to crack the password using different wordlists but nothing worked. So again, I started anaylising the memory dump. Next thought was what could be the password? Could it be the password of local user?
+The file.zip was protected with password. So I tried fcrackzip to crack the password using different wordlists but nothing worked. So again, I started anaylising the memory dump. Next thought was what could be the password? Could it be the password of local user?
 
 ```
 C:\Users\r0hanSH\Downloads\Challenge>volatility.exe -f Challenge.raw --profile=Win7SP1x86_23418 hashdump
@@ -66,13 +66,13 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 hello:1000:aad3b435b51404eeaad3b435b51404ee:a0ce834dafdfabf08cc996ba5a6bba31:::
 ```
 
-Decrypting the NTLM hash of user "hello" gives zip password "inctfiseasy". After unzipping the file.zip, we got another file named "hex" which also contains plain ASCII text with starting content "474946383961" and that's the file signature for a GIF file
+Decrypting the NTLM hash of user "hello" gives zip password "inctfiseasy". After unzipping the file.zip, we got another file named "hex" which also contains plain ASCII text with starting content "474946383961" and that's the file signature of a GIF file.
 
 ```
 localhost@r0hanSH:~$ xxd -r -p hex > flag.gif
 ```
 
-The speed of gif was very high, so I opened it in GIMP and see individual images and came across this.
+The speed of gif was very high, so I opened it in GIMP and see individual layers and came across this.
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/InCTF-VMware-CTF/first-part-of-flag.png)
 
@@ -103,12 +103,12 @@ Finally, we got the flag **inctf{w3lcom3_t0_my_w0rld_0f_m3m0rY}**
 
 ## VMware CTF
 
-It may seems easy but it wasn't. I don't have files available right now. So I will be telling the methodology I followed but important thing is to learn this technique.
+It may seems easy but it wasn't. I don't have files available right now. So I will be explaining the methodology I followed but important thing is to learn this technique.
 
 We were provided with a zip file say flag.zip
 But it was password protected, so I cracked it using fcrackzip along with rockyou.txt . I don't remember the password right now but it was having word "rain" in it. It will help later on.
 
-So now I got a PDF file, real hunt begins now. I tried everything I know. But outcome was 0. I noticed that word "rain" in zip file password. Why would one make a zip file password protected, when there are good hackers and everyone of them knows how to crack zip password ? So I used google to know what technique it could. After a lot of effort, I got to know about [**SNOW**](http://www.darkside.com.au/snow/) tool. So this was a Whitespace steganography and used **SNOW** to get the flag.
+So now I got a PDF file, real hunt begins now. I tried everything I know. But outcome was 0. I noticed that word "rain" in zip file password. Why would one make a zip file password protected, when there are good hackers and everyone of them knows how to crack zip password ? So I used google to know what technique it could. After a lot of effort, I got to know about [**SNOW**](http://www.darkside.com.au/snow/) tool. So this was a Whitespace steganography challenge and used **SNOW** to get the flag.
 ```
 ./snow -C flag.pdf
 ```

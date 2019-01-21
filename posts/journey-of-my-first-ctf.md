@@ -6,7 +6,7 @@ layout : default
 
 Note : This blog post is all about my experience at InCTF 2018 and writeup of few challenges. There were two rounds : InCTF quals (Jeopardy) and InCTF finals (Attack-Defense style). It was organised by India's #1 and World's #35 CTF team as per ctftime.org ratings of 2018.
 
-![Branching](group-pic.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/InCTF/group-pic.jpg)
 
 I have been playing wargames regularly, but never get a taste of CTFs. On 05/12/18 one person sent a message in a WhatsApp group and talked about InCTF that it's really good and blah blah... I google it and got to know about team bi0s. They are great people, once you meet them you will know how smart they are.
 
@@ -14,7 +14,7 @@ It was a team event, only Indian universities/colleges can take part in it. Team
 
 The InCTF Online quals lasts for 36 hours. I was able to solve all forensics problems (3), 1 pwn, 2 crypto and 2 Web. So I got 6th position. It was good for me. If I were in a team, I know we can do much better.
 
-![Branching](scoreboard-quals.png)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/InCTF/scoreboard-quals.png)
 
 ## InCTF Finals Call
 

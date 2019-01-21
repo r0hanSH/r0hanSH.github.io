@@ -74,7 +74,7 @@ localhost@r0hanSH:~$ xxd -r -p hex > flag.gif
 
 The speed of gif was very high, so I opened it in GIMP and see individual images and came across this.
 
-![Branching](first-part-of-flag.png)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/InCTF-VMware-CTF/first-part-of-flag.png)
 
 So now we got first part of the flag. Let's hunt for second part. After a lot effort, I found this in environmental variables.
 

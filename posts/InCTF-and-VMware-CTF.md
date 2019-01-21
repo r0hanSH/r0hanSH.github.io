@@ -43,7 +43,7 @@ Offset(V)  Name                    PID   PPID   Thds     Hnds   Sess  Wow64 Star
 
 So we can see a lot of processes are there, but interesting one is chrome.exe . So we can assume the victim was using Chrome browser to download the malware. So what can we do ? During CTF, I dumped chrome's history files. But later I came to know volatility has chromehistory plugin available.
 
-With filescan plugin I searched for history files of chrome and dumped onto my local machine. After checking the content of dumped files, I come across this (link)[https://mega.nz/#!jj4TRK4I!GS5PWWXZpbpTaXZU5LPdOldxAlXE_UkHDjhnIbYo2ckimage/pngimage/png] which contains a file called Image.png
+With filescan plugin I searched for history files of chrome and dumped onto my local machine. After checking the content of dumped files, I come across this [link](https://mega.nz/#!jj4TRK4I!GS5PWWXZpbpTaXZU5LPdOldxAlXE_UkHDjhnIbYo2ckimage/pngimage/png) which contains a file called Image.png
 
 So now comes steganography part, I opened Image.png but it was not a picture at all, it was plain ASCII text. After analysing the content, I came to know it's in hex. Starting content was
 ```

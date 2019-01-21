@@ -30,7 +30,7 @@ Open "nottheflag.pdf" and it provided a base64 encoded string.
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/intigriti/base64-decode.png)
 
 Visit this link and downloaded data.zip which was password protected.
-I tried password cracking tools like fcrackzip, john but nothing worked. I revisited that intigriti tweet and noticed that this image was not posted by them. It was [WhereIsTheFlag](https://twitter.com/WhereIsTheFlag) who uploaded it. So after some recon I come across this :
+I tried password cracking tool fcrackzip with different wordlists but nothing worked. I revisited that intigriti tweet and noticed that this image was not posted by them. It was [WhereIsTheFlag](https://twitter.com/WhereIsTheFlag) who uploaded it. So after some recon I come across this :
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/intigriti/hidden-password.png)
 

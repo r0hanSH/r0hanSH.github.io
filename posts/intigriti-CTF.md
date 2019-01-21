@@ -2,7 +2,8 @@
 layout : default
 ---
 
-# Intigriti CTF (Jan 2019)
+# Intigriti CTF 
+20-01-2019
 
 The challenge was created by a great bug bounty hunter [Inti De Ceukelaire](https://twitter.com/securinti)
 

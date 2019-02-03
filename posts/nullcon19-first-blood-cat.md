@@ -44,7 +44,7 @@ So do you see any difference here? This is just implementing simple things like 
 
 After some research, I got to know that 'diepgrm' tells the program to end. So you see ('diepgrm',) is present at index 1 of 'ins' list in "final". So let's change its position and run the following code.
 
-```
+```python
 import sys, random
 
 mem={}

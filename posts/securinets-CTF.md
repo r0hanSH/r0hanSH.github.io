@@ -257,7 +257,7 @@ drwxr-xr-x  22 root            root             4096 Mar 24 10:18 ..
 -rw-r--r--   1 root            root             1741 Mar 23 20:13 wrapper.c
 ```
 
-```C
+```c
 // wrapper.c
 #include <stdio.h>
 

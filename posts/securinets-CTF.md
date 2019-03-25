@@ -8,7 +8,7 @@ layout : default
 
 ## Rare to win (Forensics)
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/raretowin_desc.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/raretowin_desc.JPG)
 
 It's a memory dump. I anaylsed it with volatility.
 
@@ -69,7 +69,7 @@ Index  URL                                                                      
 
 See index #7, he downloaded rar file. I extracted this file with WinRAR and got this.
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/music_rar.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/music_rar.JPG)
 
 There I saw firefox.exe which was an ELF binary. I disassembled it and there was nothing malicious in it. But it's an ELF binary named as .exe, so might this is our virus. So the full path of virus becomes "C:\Users\Public\Data\firefox.exe"
 
@@ -85,7 +85,7 @@ FLAG: securinets{914353ebe43063302e511551e8782352}
 
 # Cat hunting (Forensics)
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/cat_hunting_desc.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/cat_hunting_desc.JPG)
 
 It's a memory dump. I anaylsed it with volatility.
 Initial steps were same as "Rare to win". While analysis, I used chromehistory, firefoxhistory, iehistory plugins and found this with iehistory.
@@ -160,7 +160,7 @@ FLAG: securinets{d25736febfd809ec4eba76b0aae9eab0}
 
 A .pcap file was provided.
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/easy_trade_zip.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/easy_trade_zip.JPG)
 
 I got password protected zip file and password was there in one of the packets "securinetsXD"
 
@@ -182,7 +182,7 @@ FLAG: securinets{954f670cb291ec276b1a9ff8453ea601}
 
 ## Contact me (Forensics)
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/contact_me_desc.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/contact_me_desc.JPG)
 
 ```
 localhost@red:~/Desktop/ctf/contact_DONE$ echo -n securinets | base64
@@ -336,7 +336,7 @@ FLAG: securinets{who_needs_exec_flag_when_you_have_linker_reloaded_last_time!!!?
 
 ## HIDDEN (misc)
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/misc_1.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/misc_1.JPG)
 
 FLAG: Securinets{HiDDeN_D@tA_In_S3lF_S3iGnEd_CeRtifICates}
 
@@ -344,7 +344,7 @@ FLAG: Securinets{HiDDeN_D@tA_In_S3lF_S3iGnEd_CeRtifICates}
 
 ## EZ (misc)
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/ez.jpg)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/ez.JPG)
 
 ```
 zsteg -E "b1,rgb,lsb,xy" pic.png > data

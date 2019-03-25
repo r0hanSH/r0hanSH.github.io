@@ -160,7 +160,7 @@ FLAG: securinets{d25736febfd809ec4eba76b0aae9eab0}
 
 A .pcap file was provided.
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/easy_trade_zip.JPG)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/easy_trade_zip.png)
 
 I got password protected zip file and password was there in one of the packets "securinetsXD"
 

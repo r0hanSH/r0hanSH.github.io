@@ -5,7 +5,6 @@ layout : default
 # Securinets CTF 2019
 25-03-2019
 
-NOTE : This will be a really quick writeup. **No time for full description**. If you have any doubts, you can mail me.
 
 ## Rare to win (Forensics)
 

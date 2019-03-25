@@ -71,7 +71,7 @@ See index #7, he downloaded rar file. I extracted this file with WinRAR and got 
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/securinetsctf/music_rar.JPG)
 
-There I saw firefox.exe which was an ELF binary. I disassembled it and there was nothing malicious in it. But it's an ELF binary named as .exe, so might this is our virus. So the full path of virus becomes "C:\Users\Public\Data\firefox.exe"
+There I saw firefox.exe which was an ELF binary. I disassembled it and there was nothing malicious in it. But it's an ELF binary named as .exe, so this might be the virus. So the full path of virus becomes "C:\Users\Public\Data\firefox.exe"
 
 ```
 echo -n "C:\\Users\\Public\\Data\\firefox.exe" | md5sum

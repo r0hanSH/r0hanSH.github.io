@@ -22,14 +22,14 @@ FLAG : flag{1M4p_1n_1Ns3cur3_m0d3_1s_s0_d4ng3roUS}
 
 ## Challenge 2 (Network Forensics)
 
-Download the [file](https://mega.nz/#!CXAwHJgK!mzHMdbdfpjD3vMYxLcrvSkojDB4UzbWAF5SAmKigJCA). This challenge is an interesting challenge.
+Download the [file](https://mega.nz/#!CXAwHJgK!mzHMdbdfpjD3vMYxLcrvSkojDB4UzbWAF5SAmKigJCA). This is an interesting challenge.
 Analyse the file in WireShark. I saw some hex encoded values in the ICMP packets and this is what I got.
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/random-challenges/ch2.JPG)
 
 There are also some DNS packets. Observe the subdomains listed, so these are base64 encoded. Let's decode the first one and it gives PK 
-which is the file signature of a zip file. So I got a zip file from there which was password protected and the password we already decoded
-from the hex in ICMP packets.
+which is the file signature of a zip file. So I got a zip file from there and it was password protected and we have already decoded the
+password from the hex in ICMP packets.
 
 FLAG : flag{Exf1ltr4t10n_ICMP_AnD_DNS_Tsh4rk_4_Ze_W1n}
 

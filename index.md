@@ -2,6 +2,8 @@
 layout : default
 ---
 
+[Some Random Challenges](https://r0hansh.github.io/posts/random-challenges.html) 11-04-2019
+
 [Securinets CTF 2019](https://r0hansh.github.io/posts/securinets-CTF.html) 25-03-2019
 
 [BITSctf 2019](https://r0hansh.github.io/posts/bitsctf.html) 05-02-2019

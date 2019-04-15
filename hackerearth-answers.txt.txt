@@ -1,0 +1,128 @@
+Hi Jainil,
+
+Forensics :
+
+Challenge #1 : "To human is to err"
+Solution :  Downloaded the html code from pastebin link. Opened it in browser. I ran the following commands :
+			python2 -m SimpleHTTPServer 80
+			cewl http://0.0.0.0:80/file.html > wordlist
+
+			I used this wordlist with "Burp Intruder", and got "Cookie" as flag
+
+FLAG : Cookie
+
+Challenge #2 : "What's in a Barcode?"
+Solution : Download the file. First I used "zbarimg" tool but didn't get anything. 
+
+		Later I	got these barcode bytes "TTFNT1JUWS9SSUNLICAgICAgICAgIEVIM0ExQzNLREZXKioqQUEgMzk5MiAxMDJGMDM1QTAwMDEgMTAw"
+
+			Run following command
+
+			echo TTFNT1JUWS9SSUNLICAgICAgICAgIEVIM0ExQzNLREZXKioqQUEgMzk5MiAxMDJGMDM1QTAwMDEgMTAw | base64 -d
+		
+		Got AA3992. Searched on google and found airport code CVG
+
+FLAG : FLAG_{CVG}
+
+Challenge #3 : "TIL: recovering meme"
+Solution : Download the file. Run command
+			binwalk --dd='.*' challengeFile
+
+			Now I have a gif, written KUAT in black colour.
+
+FLAG : FLAG_{KUAT}
+
+Challenge #4 : "Mr Shadow and Ms SAM are not from same mother!"
+Solution : Given was "txt.olleh%2FW380z%2Fhs.refsnart". Run following
+			python2 -c 'import urllib;print urllib.unquote("txt.olleh%2FW380z%2Fhs.refsnart")[::-1]'
+
+			I got transfer.sh/z083W/hello.txt . Download the file, it's /etc/passwd file of linux. Then run
+			john hello.txt       and got the passwords
+ 
+
+FLAG : FLAG_{ubuntu|bob|password|cookie|marathon}
+
+
+*************************************
+
+# Infrastructure
+
+Challenge #1 : "I am *domain* hunter"
+Solution : Run this command
+			
+			dig 0x10.info TXT | grep "ANSWER SECTION" -A 1 | grep "TXT" | cut -d'"' -f2 | xxd -r -p | base64 -d | base64 -d
+
+			I got "yey_kung_fu_panda"
+
+FLAG : FLAG_{TXT_yey_kung_fu_panda}
+
+Challenge #2 : "Well, this isn't the end of journey - wysiwyg"
+Solution : Opened the GIF and got redirected to "https://doll.0x10.info". View Page Source, I see TXT written there, I checked 
+			TXT record of doll.0x10.info with command
+
+			dig doll.0x10.info TXT
+
+FLAG : FLAG_{ec2-54-172-76-227.compute-1.amazonaws.com}
+
+*************************************
+
+# Generic
+
+Challenge #1 : "Are you a whitehat, blackhat, or somewhere in between?"
+FLAG : FLAG_{grey_hat}
+
+Challenge #2 : "Old tale of backtrack"
+FLAG : FLAG_{kali_linux}
+
+Challenge #3 : "History Lesson: Find the guy"
+Solution : Open the link to image found in challenge description and found this page 
+			 "http://www.catb.org/esr/faqs/hacker-howto.html"
+
+			 See the email there
+
+FLAG : FLAG_{esr@thyrsus.com}
+
+***************************************
+
+# InfoSec Industry
+
+Challenge #1 : "Don't be a SOAR looser"
+Solution : Reverse Image Search on google and find reference to phantom
+FLAG : FLAG_{phantom}
+
+Challenge #2 : "What does strange SIEM tool do?"
+Solution : Inspect Element > I saw "FLAG_{S*****}" written there beneath the meme. I know about Splunk tool.
+FLAG : FLAG_{Splunk}
+
+Challenge #3 : "Boring part: Compliance related to Security"
+Solution : Searched on google
+FLAG : PCI
+
+****************************************
+
+# Cloud
+
+Challenge : "Cloud and DNS are match made in heaven, really?"
+Solution : Run the following command 
+			
+			dig bertram.0x10.info
+
+FLAG : FLAG_{cipher-combat.s3.amazonaws.com}
+
+****************************************
+
+# Cryptography
+
+Challenge : "GPG | PGP : what was that again?"
+Solution : Downloaded all challenge files. With my recent CTF experience, I wrote a python script to bruteforce the password 
+			for private key with the known information and got "rick.morty" as the password. Run the following commands:
+
+			gpg --import priv.asc
+			gpg --decrypt secret-for-rick.gpg
+
+
+FLAG : FLAG_{thank god i found this: f_3sb__k][FB__t_vT}
+
+
+Thanks,
+red

@@ -2,7 +2,9 @@
 layout : default
 ---
 
-[Some Random Challenges](https://r0hansh.github.io/posts/random-challenges.html) 11-04-2019
+[Cipher Combat (Hackerearth CTF)](https://r0hansh.github.io/posts/hackerearth-ctf.html) 15-04-2019
+
+[Some Random Challenges (Forensics)](https://r0hansh.github.io/posts/random-challenges.html) 11-04-2019
 
 [Securinets CTF 2019](https://r0hansh.github.io/posts/securinets-CTF.html) 25-03-2019
 

@@ -2,6 +2,8 @@
 layout : default
 ---
 
+[Malware Traffic Analysis Exercise StingrayAhoy](https://r0hansh.github.io/posts/malware-traffic-analysis-stingrayAhoy.html) 20-04-2019
+
 [Cipher Combat (Hackerearth CTF)](https://r0hansh.github.io/posts/hackerearth-ctf.html) 15-04-2019
 
 [Some Random Challenges (Forensics)](https://r0hansh.github.io/posts/random-challenges.html) 11-04-2019

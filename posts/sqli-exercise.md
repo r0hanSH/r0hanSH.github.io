@@ -18,7 +18,7 @@ https://los.eagle-jump.org/gremlin_bbc5af7bed14aa50b84986f2de742f31.php?id=a'or 
 
 ## 2. Cobolt
 
-![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/sqli-images/cobolt_2.JPG)
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/sqli-images/cobalt_2.JPG)
 
 
 ```

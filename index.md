@@ -2,6 +2,8 @@
 layout : default
 ---
 
+[SQL Injection exercise](https://r0hansh.github.io/posts/sqli-exercise.html)  23-04-2019
+
 [Malware Traffic Analysis Exercise StingrayAhoy](https://r0hansh.github.io/posts/malware-traffic-analysis-stingrayAhoy.html) 20-04-2019
 
 [Cipher Combat (Hackerearth CTF)](https://r0hansh.github.io/posts/hackerearth-ctf.html) 15-04-2019

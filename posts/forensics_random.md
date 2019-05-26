@@ -3,7 +3,7 @@ layout : default
 ---
 
 # Forensics Challenges
-26-05-2019
+27-05-2019
 
 While reading the writeups published by CTF team bi0s, I came across the github profile of Abhiram. There I saw [Forensics-Workshop](https://github.com/stuxnet999/Forensics-Workshop) repo, it contains 10 challenges and I managed to solve all of them. 
 
@@ -270,7 +270,8 @@ localhost@red:~/Desktop/Forensics-Workshop/Challenge 9$ unzip file.docx
 
 Now we have a lot of files, we can use grep -Ri flag also
 
-localhost@red:~/Desktop/Forensics-Workshop/Challenge 9/word/media$ strings image2.jpeg | tail -n1.T..flag{h0wz_the_joke_hahahha!!}.r
+localhost@red:~/Desktop/Forensics-Workshop/Challenge 9/word/media$ strings image2.jpeg | tail -n1
+.T..flag{h0wz_the_joke_hahahha!!}.r
 ```
 
 So may be including this challenge in "Hard" category is joke to the audience at workshop.

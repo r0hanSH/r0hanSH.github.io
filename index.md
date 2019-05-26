@@ -2,6 +2,8 @@
 layout : default
 ---
 
+[Forensics-Workshop Challenges](https://r0hansh.github.io/posts/forensics_random.html)   27-05-2019
+
 [SQL Injection exercise](https://r0hansh.github.io/posts/sqli-exercise.html)  23-04-2019
 
 [Malware Traffic Analysis Exercise StingrayAhoy](https://r0hansh.github.io/posts/malware-traffic-analysis-stingrayAhoy.html) 20-04-2019

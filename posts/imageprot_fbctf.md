@@ -77,7 +77,7 @@ Now another thing that comes in my way is binary tries to connect to https://htt
 
 So, we bypassed this part too. Next thing is to decode the very big base64 encoded string but this time the XOR key was not "1337", but it's the content of "https://httpbin.org/status/418" . I got to know about this after analysing the last decrypt function using IDA and gdb.
 
-But the real comes now, I copied the content of that webpage and XORed with that base64 encoded string, and I observed that this is a JPEG file with the help of its signature. After the completion of this XOR stuff, I got a JPG image but the corrupted one. At first I thought may be it's the challenge part and I have to recover this image. So I started doing some basic stuff to recover it and even edited it in hex editor, when I got to know it's having some problem with "Bogus Huffman table". But later I discovered my mistake of not provind a new line character to the XOR key, I don't regret for this mistake as I learnt a lot about JPEG structure in this challenge.
+But the real problem comes now, I copied the content of that webpage and XORed with that base64 encoded string, and I observed that this is a JPEG file with the help of its signature. After the completion of this XOR stuff, I got a JPG image but the corrupted one. At first I thought may be it's the challenge part and I have to recover this image. So I started doing some basic stuff to recover it and even edited it in hex editor, when I got to know it's having some problem with "Bogus Huffman table". But later I discovered my mistake of not provind a new line character to the XOR key, I don't regret for this mistake as I learnt a lot about JPEG structure in this challenge. So to get the correct image, I wrote the following script : 
 
 ```py
 import requests
@@ -101,6 +101,6 @@ fd.close()
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/fbctf/flag.jpg)
 
 
-FLAG : fb{Prot3ct_Th3_Gr4ph!1}
+### FLAG : fb{Prot3ct_Th3_Gr4ph!1}
 
 ---

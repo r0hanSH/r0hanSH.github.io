@@ -56,3 +56,4 @@ print password
 r.sendline(str(password))
 print r.recv()
 
+r.close()

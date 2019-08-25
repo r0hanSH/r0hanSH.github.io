@@ -75,7 +75,7 @@ Let's open it in dnSpy, I analysed this executable and ```Decrypt``` seems inter
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/codefest/1.JPG)
 
-So here it found, Target[0] = 'M', Target[1] = 'Z' ... Target[128] = 'P', Target[129] = 'E'
+So here I found, Target[0] = 'M', Target[1] = 'Z' ... Target[128] = 'P', Target[129] = 'E'
 
 So the executable is packed, let's unpack it. I dump the content of ```Target``` and got an unpacked executable. Simply opening it in dnSpy, revealed the password and flag.
 

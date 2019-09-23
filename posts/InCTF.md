@@ -22,6 +22,23 @@ flag_nums = [claripy.BVS("flag_%d" % i, 64) for i in range(16)]
 
 xor_key = '!@#sbjhdn5z6sf5gqc7kcd5mck7ld=&6'
 
+"""
+Value of tiles for Player
+0a 0b 0c 0d
+0e 0f 10 11
+12 13 14 15
+16 17 18 19
+
+Value of tiles for MACHINE
+1a 1b 1c 1d
+1e 1f 20 21
+22 23 24 25
+26 27 28 29
+
+flag_nums follows pattern -> player_move, machine_move, player_move, machine_move, ...
+"""
+
+
 for i in range(0, 16, 2):
 	state.solver.add(flag_nums[i] >= 0xa, flag_nums[i] <= 0x19)
 	state.solver.add(flag_nums[i+1] >= 0x1a, flag_nums[i] <= 0x29)

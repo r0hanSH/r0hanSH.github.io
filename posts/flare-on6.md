@@ -3,7 +3,7 @@ layout : default
 ---
 
 # FLARE-ON 6
-28-09-2019
+30-09-2019
 
 This was my first year participating in flare-on CTF. I'm really thankful to FireEye for organising this lovely CTF. It taught me a lot of new techniques. I had mid-terms, projects so couldn't give it proper time but I was able to solve 9 challenges out of 12 and hope I will do better next year.
 
@@ -17,7 +17,7 @@ localhost@red:~/Desktop$ file MemeCatBattlestation.exe
 MemeCatBattlestation.exe: PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows
 ```
 
-This challenge was written in .NET, so let's decompile the binary using ```dnspy```.
+This challenge was a .NET executable, so let's decompile it using ```dnspy```.
 
 Analyse the ```Main()``` function and you will see it checks two weapon codes and if both of them are correct then it will give you the flag using the code "XOR(weapon_code2 + weapon_code1, a pre-defined array)"
 
@@ -25,7 +25,7 @@ For Stage1, check function ```FireButton_Click``` of ```Stage1Form```
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-1-stage1.JPG)
 
-It's clear that first weapon code is "RAINBOW". Now let's analyse ```Stage2Form``` function.
+It's clear that first weapon code is "RAINBOW". Now let's analyse ```isValidWeaponCode``` function of ```Stage2Form```.
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-1-stage2.JPG)
 
@@ -38,20 +38,20 @@ So the second weapon code is "Bagel_Cannon" and we got the flag.
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-1-flag.JPG)
 
-FLAG : Kitteh_save_galixy\@flare-on.com
+FLAG : Kitteh_save_galixy@flare-on.com
 
 ## 2 - Overlong
 
-I solved it under few seconds, oh not me actually Cutter(radare2 GUI version) solved it :)
+I solved it in few seconds, oh not me actually Cutter(radare2 GUI version) solved it :)
 Let's open it in Cutter with Analysis mode enabled and then check ```Strings``` and we got the flag.
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-2-flag.JPG)
 
-FLAG : I_a_M_t_h_e_e_n_C_o_D_i_n_g\@flare-on.com
+FLAG : I_a_M_t_h_e_e_n_C_o_D_i_n_g@flare-on.com
 
 ## 3 - Flarebear
 
-An .apk file was provided, I decompiled it using apktool. The ```FlareBearActivity.java``` at "com\fireeye\flarebear" contains juicy stuff. I analysed the code statically and ```setMood``` performs the checks to call ```danceWithFlag()```.
+A .apk file was provided, I decompiled it using apktool. The ```FlareBearActivity.java``` at "com\fireeye\flarebear" contains juicy stuff. I analysed the code statically and ```setMood``` performs the checks to call ```danceWithFlag()```.
 
 ```java
  public final void setMood() {
@@ -100,23 +100,19 @@ So rather than writing mathematical equation, I started with hit and trial metho
 Now let's see how the functions feed(), play() and clean() changes the value of 3 states (mass, happy and clean)
 
 ```
-    		mass	happy	clean
+    		      mass	   happy	 clean
 
-feed()      +10		 +2		  -1
+feed()      +10      +2		    -1
 
-play()      -2		 +4		  -1
+play()      -2		     +4		    -1
 
-clean()      0       -1       +6
+clean()      0       -1      +6
 ```
 
-To make mass=72, happy=30 and clean=0, how many times should these functions should be called ? It's simple maths and I found calling feed() 8 times then call play() 4 times and call clean() 2 times and we got the flag
+To make mass=72, happy=30 and clean=0, how many times should these functions be called ? It's simple maths and I found calling feed() 8 times then call play() 4 times and call clean() 2 times and we got the flag
 
-![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-3-flag.JPG)
+FLAG: th4t_was_be4rly_a_chall3nge@flare-on.com 
 
-FLAG: th4t_was_be4rly_a_chall3nge\@flare-on.com 
-
-
-**NOTE** : I haven't made notes of the following challenges and don't have time to re-solve it now. So deal with brief info only. 
 
 ## 4 - Dnschess
 
@@ -176,7 +172,7 @@ print flag + "@flare-on.com"
 
 We got the flag :)
 
-FLAG : LooksLikeYouLockedUpTheLookupZ\@flare-on.com
+FLAG : LooksLikeYouLockedUpTheLookupZ@flare-on.com
 
 ## 5 - demo
 
@@ -188,7 +184,7 @@ Open 4k.exe using ```nijaripper``` and then press ```F10```, now you will have .
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-5-flag.JPG)
 
 
-FLAG: moar_pouetry\@flare-on.com
+FLAG: moar_pouetry@flare-on.com
 
 ## 6 - bmphide
 
@@ -228,7 +224,7 @@ After doing so, I ran my script and got another .BMP file. Then again running sc
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-6-flag.JPG)
 
-FLAG: d0nT_tRu$t_vEr1fy\@flare-on.com
+FLAG: d0nT_tRu$t_vEr1fy@flare-on.com
 
 ## 7 - wopr
 
@@ -236,7 +232,7 @@ The exe was packed with PyInstaller, we can unpack it using ```pyinstxtractor```
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-7-unpack.JPG)
 
-This tools also tells the possible entry point, I used uncompyle6 to decompile ```pyiboot02_cleanup.pyc```
+This tool also tells the possible entry point, I used uncompyle6 to decompile ```pyiboot02_cleanup.pyc```
 I read the output.py(decompiled code), but still it wasn't the real code? I don't see any strings that I see when I run the exe. So let's analyse output.py further. It had some weird functions, fire(), eye() etc. I found something interesting i.e. the functionality of print() and exec() was exchanged. i.e. if I call print(A) then will be exec(A). I also opened the decompiled code in a hex editor and saw there were "09" and "20" i.e. tab and space which was used to create the actual code. So last code block in decompiled code was
 
 ```
@@ -272,7 +268,7 @@ Run exe and pass this launch code and get the flag :)
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-7-flag.JPG)
 
 
-FLAG: L1n34R_4L93bR4_i5_FuN\@flare-on.com
+FLAG: L1n34R_4L93bR4_i5_FuN@flare-on.com
 
 ## 8 - snake
 
@@ -298,7 +294,7 @@ I thought our main goal is to make a very high score but it wasn't that. I set a
 
 ![Image not found](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/flareon/ch-8-flag.JPG)
 
-FLAG: NARPAS-SWORD\@FLARE-ON.COM
+FLAG: NARPAS-SWORD@FLARE-ON.COM
 
 ## 9 - reloadered
 

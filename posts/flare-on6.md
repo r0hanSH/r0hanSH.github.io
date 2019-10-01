@@ -99,15 +99,14 @@ So rather than writing mathematical equation, I started with hit and trial metho
 
 Now let's see how the functions feed(), play() and clean() changes the value of 3 states (mass, happy and clean)
 
-```
-	   	   	mass	   happy	 clean
+          mass    happy    clean
 
-feed()	   +10	   +2	   -1
+feed()    +10      +2       -1
 
-play()	   -2	   +4	   -1
+play()    -2       +4       -1
 
-clean()	   0	   -1	   +6
-```
+clean()    0       -1       +6
+
 
 To make mass=72, happy=30 and clean=0, how many times should these functions be called ? It's simple maths and I found calling feed() 8 times then call play() 4 times and call clean() 2 times and we got the flag
 

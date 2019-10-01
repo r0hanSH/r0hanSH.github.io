@@ -100,7 +100,7 @@ So rather than writing mathematical equation, I started with hit and trial metho
 Now let's see how the functions feed(), play() and clean() changes the value of 3 states (mass, happy and clean)
 
 ```
-          mass    happy    clean
+function  mass    happy    clean
 
 feed()    +10      +2       -1
 

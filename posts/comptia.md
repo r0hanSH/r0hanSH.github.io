@@ -25,9 +25,7 @@ chars_mapping = ['11', '12', '13', '14', '15', '21', '22', '23', '24', '24', '25
 given = "3254431513454215214533134424343324433344431513454215"
 tmp = [given[i]+given[i+1] for i in range(0, len(given), 2)]
 
-flag = ""
-for i in tmp:
-	flag += flag_chars[chars_mapping.index(i)]	
+flag = ''.join(flag_chars[chars_mapping.index(i)] for i in tmp)
 
 print flag
 ```
@@ -50,13 +48,9 @@ STRLEN = 45
 flag_nums = [claripy.BVS("flag_%d" % i, 32) for i in range(STRLEN)]
 
 summm = 0
-flag_nums[0] = ord("C")
-flag_nums[1] = ord("T")
-flag_nums[2] = ord("F")
-flag_nums[3] = ord("H")
-flag_nums[4] = ord("U")
-flag_nums[5] = ord("B")
-flag_nums[6] = ord("-")
+a = "CTFHUB-"
+for i in range(len(a)):
+	flag_nums[i] = ord(a[i])
 
 for i in range(0, 45):
 	state.solver.add(flag_nums[i] >= 33,flag_nums[i] <= ord("z"))

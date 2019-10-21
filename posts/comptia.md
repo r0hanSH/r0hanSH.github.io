@@ -5,6 +5,10 @@ layout : default
 # CompTIA Secure - IT 2019
 06-10-2019
 
+I secured first place in this CTF :)
+
+![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/comptia/score.JPG)
+
 ## Secure Password (RE)
 
 I analysed the binary and got the following key character mapping. According to this matrix, 11=a 12=b 13=c etc.

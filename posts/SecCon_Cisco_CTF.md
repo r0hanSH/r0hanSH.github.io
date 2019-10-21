@@ -117,7 +117,7 @@ This challenge includes two things:
 
 1. CBC bit-flip : Our goal is to find the ciphertext for plaintext "admin" to call ```admin_decrypt(ct)```. The service offers to give ciphertext of our plaintext. But we can't send "admin" as plaintext. We need to reach the "Admin decryption service" and it checks whether the first 5 bytes of decrypted plaintext is "admin". So we send "admiX" as plaintext and gets its ciphertext. Then we do XOR(cipher[4], 'X', 'n') and replace it with cipher[4]. So now we have ciphertext of plaintext "admin". 
 
-2. CBC IV detection : So now we are admin. Next step is to find IV(Initialisation Vector) used to decrypt our ciphertext. Providing "\x00"\*16 as ciphertext gives decrypted plaintext. Now XOR(plain[:16], plain[16:]) gives the IV i.e. FLAG.  
+2. CBC IV detection : So now we are admin. Next step is to find IV(Initialization Vector) used to decrypt our ciphertext. Providing "\x00"\*16 as ciphertext gives decrypted plaintext. Now XOR(plain[:16], plain[16:]) gives the IV i.e. FLAG.  
 
 ```py
 from pwn import *

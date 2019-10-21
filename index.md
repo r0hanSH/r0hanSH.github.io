@@ -2,9 +2,11 @@
 layout : default
 ---
 
+[Cisco SecCon CTF](https://r0hansh.github.io/posts/SecCon_Cisco_CTF)     21-10-2019
+
 [CompTIA Secure - IT](https://r0hansh.github.io/posts/comptia)     06-10-2019
 
-[Flare-on 6](https://r0hansh.github.io/posts/flare-on6)    30-09-2019
+[FLARE-On 6](https://r0hansh.github.io/posts/flare-on6)    30-09-2019
 
 [InCTF 2019](https://r0hansh.github.io/posts/InCTF)     23-09-2019
 

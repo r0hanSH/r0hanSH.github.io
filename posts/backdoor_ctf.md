@@ -42,7 +42,7 @@ The last check is made in ```encrypt_decrypt``` function where it XORs the rando
 a = XOR( base64_of_password_plus_CRLF, random_string_of_same_size )
 
 if(a==hex_bytes):
-	print("Corret!!")
+	print("Correct!!")
 else:
 	print("Wrong!!")
 
@@ -54,7 +54,7 @@ The problem is we only know first 4 bytes of flag and we also need to find the c
 random_string = XOR(hex_bytes, base64_of_password_plus_CRLF)
 ```
 
-We got first few bytes of random string ("LDO.."). Now we need to find the Offset(seed) value which generates random numbers 11, 3, 14 (because ord('L')-65 = 11, ord('D')-65 = 3, ord('O')-65 = 14)
+We got first few bytes of random string ("LDO.."). Now we need to find the Offset(seed) value which generates random numbers 11, 3, 14 (because ord('L')-65 = 11, ord('D')-65 = 3, ord('O')-65 = 14). After analysing the exe in IDA, I found the seed value is less than 1000 (because seed was passed as seed = Offset % 1000).
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/backdoorctf/seed.JPG)
 

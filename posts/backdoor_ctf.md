@@ -11,7 +11,7 @@ We were required to reverse a GO windows exe and provide correct value of Passwo
 
 ![Branching](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/images/backdoorctf/init.JPG)
 
-According to the organizers, this was a warmup challenge but actually it's not. This was a GO binary which is difficult to reverse engineer as it contains large number of functions. This exe contained 2037 functions.
+According to the organizers, this was a warmup challenge but actually it's not. This was a GO binary which is difficult to reverse engineer as it contains large number of functions. This exe have 2037 functions.
 
 We have to provide two values:
 

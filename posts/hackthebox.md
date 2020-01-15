@@ -47,7 +47,7 @@ The write-ups are password protected with their respective root flags. Basically
 
 ---
 
-So this is the end of my journey on HTB and now I will get a break from CTFs as campus placements are approaching 😑
+So this is the end of my journey on HTB and now I will take a break from CTFs as campus placements are approaching 😑
 
 ![EndOfHTBJourney](https://raw.githubusercontent.com/r0hanSH/r0hanSH.github.io/master/HTB/endofjourneyonHTB.JPG)
 

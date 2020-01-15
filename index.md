@@ -2,6 +2,8 @@
 layout : default
 ---
 
+[HackTheBox Writeups](https://r0hansh.github.io/posts/hackthebox)     15-01-2020
+
 [Backdoor CTF](https://r0hansh.github.io/posts/backdoor_ctf)     28-10-2019
 
 [Cisco SecCon CTF](https://r0hansh.github.io/posts/SecCon_Cisco_CTF)     21-10-2019

@@ -3,7 +3,7 @@ layout : default
 ---
 
 # Cipher Combat HackerEarth 2020
-27-01-2020
+26-01-2020
 
 This CTF was far better than the last year's cipher combat. Thanks to HackerEarth team for organizing such CTFs.
 I don't have much time to explain everything about all the challenges. I will only discuss two challenges, but leave brief info about other remaining challenges so that you can solve them on your own. For any queries, you can contact me on twitter or e-mail.
@@ -126,7 +126,7 @@ HE{4ud10_fil3s_c4n_h1d3_d4t4}
 
 ### Merge-Me
 
-```cat \`ls\` > x.pcap```
+```cat `ls` > x.pcap```
 
 Open x.pcap in wireshark, analyse FTP communication.
 

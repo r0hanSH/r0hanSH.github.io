@@ -2,6 +2,8 @@
 layout : default
 ---
 
+[Cipher Combat HackerEarth 2020](https://r0hansh.github.io/posts/cipher-combat-hackerearth)     26-01-2020
+
 [HackTheBox Writeups](https://r0hansh.github.io/posts/hackthebox)     15-01-2020
 
 [Backdoor CTF](https://r0hansh.github.io/posts/backdoor_ctf)     28-10-2019

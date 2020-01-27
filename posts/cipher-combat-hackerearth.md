@@ -49,18 +49,14 @@ fd.close()
 flag = ""
 
 for i in range(0, len(l),2):
-	op1 = l[i].split('\t')[2].replace('\n','')[:3]
-	intval1 = int(l[i].split('\t')[2].replace('\n','').split(',')[1], 16)
-	cmpval1 = int(l[i+1].split('\t')[2].replace('\n','').split(',')[1], 16)
-	#print op1, intval1, cmpval1
-	if op1 == "add":
-		#print "add"
+	tmp = l[i]
+	intval1 = int(l[i].split(',')[1], 16)
+	cmpval1 = int(l[i+1].split(',')[1], 16)
+	if "add" in tmp:
 		flag += chr(cmpval1 - intval1)
-	elif op1 == "sub":
-		#print "sub"
+	elif "sub" in tmp:
 		flag += chr((cmpval1 + intval1)%256)
 	else: # xor
-		#print "xor"
 		flag += chr(cmpval1 ^ intval1)
 
 print flag

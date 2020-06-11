@@ -1,0 +1,9 @@
+<html>
+<script>
+    var data = 'user=abc&id=0';
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/share", true);
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.send(data);
+</script>
+</html>

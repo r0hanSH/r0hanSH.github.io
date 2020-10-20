@@ -1,0 +1,11 @@
+<html>
+<body>
+<script>
+window.addEventListener("message", function(evt) {
+		if (evt.data.hasOwnProperty("vl_disable_tracking")) {
+        	console.log("WEBAPP message", evt.data, location.href);
+        }
+});
+</script>
+</body>
+</html>

